@@ -2,5 +2,5 @@
 <ul>
 <li><a href="https://code.google.com/p/lambdasoft/source/browse/wiki/Acta%2017-10-14.pdf">17/10/2014</a></li>
 <li><a href="https://code.google.com/p/lambdasoft/source/browse/wiki/Acta24-10-2014.pdf">24/10/2014</a></li>
-<li><a href="https://code.google.com/p/lambdasoft/source/browse/wiki/Acta25-10-2014.pdf">24/10/2014</a></li>
+<li><a href="https://code.google.com/p/lambdasoft/source/browse/wiki/Acta25-10-2014.pdf">25/10/2014</a></li>
 </ul>
