@@ -2,7 +2,7 @@
 
 = Especificación de requisitos de Crysport =
 
-Puede descargar el documento de especificación de requisitos aquí.
+Puede descargar el documento de especificación de requisitos <a href="https://lambdasoft.googlecode.com/svn/wiki/Requisitos.pdf">aquí</a>.
 
 = Planificación del proyecto =
 
