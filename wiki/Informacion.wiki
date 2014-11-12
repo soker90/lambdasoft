@@ -1,0 +1,18 @@
+= Página Informatica de LambdaSoft =
+
+= Especificación de requisitos de Crysport =
+
+Puede descargar el documento de especificación de requisitos aquí.
+
+= Planificación del proyecto =
+
+Puede descargar el documento con la planificación del proyecto aquí.
+
+= Calidad =
+
+Puede ver nuestra filosofía de calidad <a href="https://sites.google.com/site/lsuclm/calidad">aquí</a>.
+
+
+Puede ver las preguntas de evaluación para la certificación de la empresa aquí.
+
+Y los resultados de la Evaluación aquí.
