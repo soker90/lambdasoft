@@ -1,6 +1,7 @@
 package lambdasoft.crysport.Persistencia;
 
 import java.sql.*;
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 public class Agente {
 	
@@ -32,8 +33,16 @@ public class Agente {
  
     //Metodo para realizar la conexion a la base de datos 
     private void conectar() throws Exception {
-         Class.forName(driver);
-         mBD=DriverManager.getConnection(url);
+        // Class.forName(driver);
+         //mBD=DriverManager.getConnection(url);
+         
+         MysqlDataSource dataSource = new MysqlDataSource();
+         dataSource.setUser(userName);
+         dataSource.setPassword("password");
+         dataSource.setDatabaseName(nombre);
+         dataSource.setServerName(url);
+
+         Connection conexion = dataSource.getConnection();
     }
 
     
@@ -72,7 +81,7 @@ public class Agente {
     }
     
     
-	public Vector<Object> select(String SQL) throws SQLException,Exception{
+	/*public Vector<Object> select(String SQL) throws SQLException,Exception{
             PreparedStatement stmt=mBD.prepareStatement(SQL);
             ResultSet rs=stmt.executeQuery();
             Vector<Object> vo=new Vector();
@@ -86,6 +95,6 @@ public class Agente {
 		/*Metodo para realizar una busqueda o seleccion de informacion enla base de datos
 	    *El m�todo select develve un vector de vectores, donde cada uno de los vectores
 	    *que contiene el vector principal representa los registros que se recuperan de la base de datos.
-	    */	
-	}
+	    /	
+	}*/
 }
