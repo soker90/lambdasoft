@@ -13,10 +13,11 @@ public class Agente {
     private static String url="sql4.freemysqlhosting.net";
     private static String nombre="sql459518";
     private static String userName="sql459518";
+    private static String password="tX3%wA6*";
     
 
     //Constructor
-    private Agente()throws Exception {
+    public Agente()throws Exception {
     	conectar();
     }
     
@@ -32,7 +33,7 @@ public class Agente {
      }
  
     //Metodo para realizar la conexion a la base de datos 
-    private void conectar() throws Exception {
+    public void conectar() throws Exception {
         // Class.forName(driver);
          //mBD=DriverManager.getConnection(url);
          
