@@ -1,28 +1,37 @@
 package lambdasoft.crysport.Dominio;
 
 public class Competicion {
-	private int id;
+	private String id;
 	private String fecha;
 	private String organizador;
 	private String modalidad;
-	public Gestor_de_competiciones unnamed_Gestor_de_competiciones_;
+	private Gestor_de_competiciones gestorCompeticiones;
 
-	public Competicion(int id, String fecha, String organizador, String modalidad) {
+	public Competicion(String id, String fecha, String organizador, String modalidad) {
 		this.id=id;
 		this.fecha=fecha;
 		this.organizador=organizador;
 		this.modalidad=modalidad;
+		this.gestorCompeticiones=new Gestor_de_competiciones();
 		throw new UnsupportedOperationException();
 	}
-
-	public int getId() {
+	
+	public Gestor_de_competiciones getCompeticiones(){
+		return this.gestorCompeticiones;
+	}
+	
+	public void insert(){
+		this.gestorCompeticiones.InsertarCompeticion(this);
+	}
+	
+	public String getId() {
 		return this.id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-
+	
 	public String getFecha() {
 		return this.fecha;
 	}
