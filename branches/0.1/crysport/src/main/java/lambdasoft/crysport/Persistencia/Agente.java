@@ -1,7 +1,6 @@
 package lambdasoft.crysport.Persistencia;
 
 import java.sql.*;
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 public class Agente {
 	
@@ -36,14 +35,22 @@ public class Agente {
     public void conectar() throws Exception {
         // Class.forName(driver);
          //mBD=DriverManager.getConnection(url);
+    	try
+    	 {
+    		Class.forName("com.mysql.jdbc.Driver");
+    	 } catch (Exception e)
+    	 {
+    		 e.printStackTrace();
+    	 }
+    	Connection conexion = DriverManager.getConnection ("jdbc:mysql://"+url+"/"+nombre,userName, password);
          
-         MysqlDataSource dataSource = new MysqlDataSource();
+         /*MysqlDataSource dataSource = new MysqlDataSource();
          dataSource.setUser(userName);
          dataSource.setPassword("password");
          dataSource.setDatabaseName(nombre);
          dataSource.setServerName(url);
 
-         Connection conexion = dataSource.getConnection();
+         Connection conexion = dataSource.getConnection();*/
     }
 
     
