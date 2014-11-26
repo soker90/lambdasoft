@@ -2,6 +2,8 @@ package lambdasoft.crysport.Dominio;
 
 import java.util.LinkedList;
 
+import lambdasoft.crysport.Persistencia.Agente;
+
 public class Gestor_de_competiciones {
 	//private lista_Competiciones LinkedList<Competeticiones>=new LinkedList<Competicion>();
 	private LinkedList<Competicion> lista_Competiciones;
@@ -23,7 +25,9 @@ public class Gestor_de_competiciones {
 		throw new UnsupportedOperationException();
 	}
 
-	public boolean InsertarCompeticion(int id, String fecha, String organizador, String modalidad) {
+	public boolean InsertarCompeticion(Competicion c) {
+		Agente agente = Agente.getAgente();
+		agente.insert("INSERT INTO competiciones VALUES("+c.getId()+c.getFecha()+c.getOrganizador()+c.getModalidad()+")");
 		throw new UnsupportedOperationException();
 	}
 }
