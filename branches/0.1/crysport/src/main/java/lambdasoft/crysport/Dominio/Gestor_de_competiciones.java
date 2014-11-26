@@ -11,7 +11,7 @@ public class Gestor_de_competiciones {
 	}
 	
 	public void listarCompeticiones() {
-		agente=Agente.
+		//agente=Agente.
 		throw new UnsupportedOperationException();
 	}
 
