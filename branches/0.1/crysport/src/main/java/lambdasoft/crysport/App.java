@@ -13,7 +13,6 @@ public class App
         System.out.println( "Hello World!" );
         try {
 			Agente a = new Agente();
-			a.conectar();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
