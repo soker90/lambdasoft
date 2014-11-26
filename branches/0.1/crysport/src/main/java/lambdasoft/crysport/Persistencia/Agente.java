@@ -13,6 +13,7 @@ public class Agente {
     private static String nombre="sql459526";
     private static String userName="sql459526";
     private static String password="fF5*rU6!";
+    private static Connection conexion;
     
 
     //Constructor
@@ -42,7 +43,7 @@ public class Agente {
     	 {
     		 e.printStackTrace();
     	 }
-    	Connection conexion = DriverManager.getConnection ("jdbc:mysql://"+url+"/"+nombre,userName, password);
+    	conexion = DriverManager.getConnection ("jdbc:mysql://"+url+"/"+nombre,userName, password);
          
          /*MysqlDataSource dataSource = new MysqlDataSource();
          dataSource.setUser(userName);
