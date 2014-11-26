@@ -8,11 +8,11 @@ import lambdasoft.crysport.Persistencia.Agente;
  */
 public class App 
 {
-    public static void main( String[] args )
+	public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	System.out.println( "Hello World!" );
         try {
-			Agente a = new Agente();
+			new Agente();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
