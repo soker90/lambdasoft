@@ -11,9 +11,9 @@ public class Agente {
     protected static Connection mBD;
 	//Identificador  de la base de datos
     private static String url="sql4.freemysqlhosting.net";
-    private static String nombre="sql459518";
-    private static String userName="sql459518";
-    private static String password="tX3%wA6*";
+    private static String nombre="sql459526";
+    private static String userName="sql459526";
+    private static String password="fF5*rU6!";
     
 
     //Constructor
