@@ -1,21 +1,18 @@
 package lambdasoft.crysport.Dominio;
 
-import java.lang.reflect.Array;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
-import lambdasoft.crysport.Persistencia.Agente;
 
 public class Gestor_de_credenciales {
 
-	public static void ComprobarLogin(String usuario, String pass) {
-		System.out.print(usuario+" "+pass);
+	public static boolean ComprobarLogin(String usuario, String pass) {
 		/*try {
-			ResultSet resultado = Agente.getAgente().select("SELECT * FROM `usuarios`");
-			Array usuarios = resultado.getArray(0).;
-			//if(resultado.getArray(0) == usuario)
-	    	//String user = rs.getString(2);
-			//}while(resultado.next());
+			ResultSet rs = Agente.getAgente().select("SELECT * FROM `usuarios`");
+			while (rs.next())
+			{
+				if(rs.getString(1) == usuario)
+					if(rs.getString(2) == pass)
+						return true;
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -23,6 +20,7 @@ public class Gestor_de_credenciales {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
+		return false;
 	}
 
 	public void FormGestCompeticiones() {
