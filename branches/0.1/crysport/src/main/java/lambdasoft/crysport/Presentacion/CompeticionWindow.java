@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 
 import java.awt.BorderLayout;
 
+import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -14,6 +15,8 @@ import javax.swing.JButton;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+import lambdasoft.crysport.Dominio.Usuario;
 
 public class CompeticionWindow {
 
@@ -215,6 +218,13 @@ public class CompeticionWindow {
 	private class BtnAceptarMouseListener extends MouseAdapter {
 		@Override
 		public void mouseClicked(MouseEvent e) {
+			Usuario u = new Usuario(txtUsuario.getText(),txtContrasenia.getText());
+			if(u.select()){
+				JOptionPane.showMessageDialog(null, null, "InfoBox: Acceso correcto " + null, JOptionPane.INFORMATION_MESSAGE);
+			}else{
+				JOptionPane.showMessageDialog(null, null, "InfoBox: Acceso denegado " + null, JOptionPane.INFORMATION_MESSAGE);
+
+			}
 		}
 	}
 }
