@@ -1,5 +1,9 @@
 package lambdasoft.crysport.Dominio;
 
+import java.sql.SQLException;
+
+import lambdasoft.crysport.Persistencia.Agente;
+
 public class Gestor_de_competiciones {
 	public Competicion unnamed_Competicion_;
 
@@ -9,9 +13,21 @@ public class Gestor_de_competiciones {
 	}
 
 	public boolean modificarCompeticion(String fecha, String organizador, String modalidad) {
-		throw new UnsupportedOperationException();
-		//SQL = "UPDATE `competiciones` SET `id`="+"Alguno"+",`fecha`="+fecha.toString()+
-				//",`organizador`="+organizador+",`modalidad`="+modalidad+" WHERE 1;";
+		String SQL = "UPDATE `competiciones` SET `id`="+"Alguno"+",`fecha`="+fecha.toString()+
+				",`organizador`="+organizador+",`modalidad`="+modalidad+" WHERE 1;";
+		try {
+			int resul = Agente.getAgente().update(SQL);
+			if(resul >= 0)
+				return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+		
 	}
 
 	public boolean BorrarCompeticion(int id) {
