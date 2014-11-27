@@ -1,5 +1,7 @@
 package lambdasoft.crysport.Dominio;
 
+import java.sql.ResultSet;
+
 public class Competicion {
 	private String id;
 	private String fecha;
@@ -12,16 +14,30 @@ public class Competicion {
 		this.fecha=fecha;
 		this.organizador=organizador;
 		this.modalidad=modalidad;
-		this.gestorCompeticiones=new Gestor_de_competiciones();
-		throw new UnsupportedOperationException();
+	}
+	
+	public Competicion(String id){
+		this.id=id;
 	}
 	
 	public Gestor_de_competiciones getCompeticiones(){
 		return this.gestorCompeticiones;
 	}
 	
-	public void insert() throws Exception{
-		//this.gestorCompeticiones.InsertarCompeticion(this);
+	public boolean delete(){
+		return Gestor_de_competiciones.BorrarCompeticion(Integer.parseInt(this.id));
+	}
+	
+	public boolean insert(){
+		return Gestor_de_competiciones.InsertarCompeticion(this.id,this.fecha,this.organizador,this.modalidad);
+	}
+	
+	public boolean update(){
+		return Gestor_de_competiciones.ModificarCompeticion(this.id,this.fecha,this.organizador,this.modalidad);
+	}
+	
+	public ResultSet selectAll(){
+		return Gestor_de_competiciones.SeleccionarTodo();
 	}
 	
 	public String getId() {
