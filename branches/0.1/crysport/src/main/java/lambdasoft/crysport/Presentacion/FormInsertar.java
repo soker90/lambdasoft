@@ -91,5 +91,11 @@ public class FormInsertar {
 		{
 			frame.getContentPane().add(txtFecha);
 		}
+		
+		btnInsertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+            }
+        });
 	}
 }

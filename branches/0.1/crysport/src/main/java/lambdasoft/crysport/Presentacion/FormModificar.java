@@ -1,11 +1,15 @@
 package lambdasoft.crysport.Presentacion;
 
 import java.awt.EventQueue;
+import java.beans.EventHandler;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
+import lambdasoft.crysport.Dominio.Competicion;
+import lambdasoft.crysport.Dominio.Gestor_de_credenciales;
 
 public class FormModificar {
 
@@ -90,6 +94,11 @@ public class FormModificar {
 		{
 			btnModificar.setBounds(163, 215, 117, 25);
 			frame.getContentPane().add(btnModificar);
+			btnModificar.addActionListener(new java.awt.event.ActionListener() {
+	            public void actionPerformed(java.awt.event.ActionEvent evt) {
+	                
+	            }
+	        });
 		}
 	}
 }
