@@ -2,6 +2,8 @@ package lambdasoft.crysport.Persistencia;
 
 import java.sql.*;
 
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
 public class Agente {
 	
 	//Instancia del agente
@@ -13,9 +15,7 @@ public class Agente {
     private static String nombre="sql459526";
     private static String userName="sql459526";
     private static String password="fF5*rU6!";
-    @SuppressWarnings("unused")
-	private static Connection conexion;
-    
+
 
     //Constructor
     public Agente()throws Exception {
@@ -40,20 +40,13 @@ public class Agente {
     	try
     	 {
     		Class.forName("com.mysql.jdbc.Driver");
-    		conexion = DriverManager.getConnection ("jdbc:mysql://"+url+"/"+nombre,userName, password);
+    		mBD = DriverManager.getConnection ("jdbc:mysql://"+url+"/"+nombre,userName, password);
     	 } catch (Exception e)
     	 {
     		 e.printStackTrace();
     	 }
     	
          
-         /*MysqlDataSource dataSource = new MysqlDataSource();
-         dataSource.setUser(userName);
-         dataSource.setPassword("password");
-         dataSource.setDatabaseName(nombre);
-         dataSource.setServerName(url);
-
-         Connection conexion = dataSource.getConnection();*/
     }
 
     
@@ -65,12 +58,11 @@ public class Agente {
   //Metodo para realizar una consulta en la base de datos
     public ResultSet select(String SQL) throws SQLException, Exception{ 
     	conectar();
-    	PreparedStatement stmt = mBD.prepareStatement(SQL);
-    	ResultSet rs = stmt.executeQuery(SQL); 
-    	
-    	stmt.close();
-    	desconectar();
-    	return rs;
+    	Statement stmt = mBD.createStatement();
+    	ResultSet res = stmt.executeQuery(SQL); 
+    	//stmt.close();
+    	//desconectar();
+    	return res;
     }
 
     //Metodo para realizar una insercion en la base de datos
@@ -102,22 +94,5 @@ public class Agente {
     	desconectar();
     	return res;
     }
-    
-    
-	/*public Vector<Object> select(String SQL) throws SQLException,Exception{
-            PreparedStatement stmt=mBD.prepareStatement(SQL);
-            ResultSet rs=stmt.executeQuery();
-            Vector<Object> vo=new Vector();
-            while(rs.next()){
-                Vector<Object> vu=new Vector();
-                vu.add(rs.getString("login"));
-                vu.add(rs.getString("password"));
-                vo.add(vu);
-            }
-            return vo;
-		/*Metodo para realizar una busqueda o seleccion de informacion enla base de datos
-	    *El m�todo select develve un vector de vectores, donde cada uno de los vectores
-	    *que contiene el vector principal representa los registros que se recuperan de la base de datos.
-	    /	
-	}*/
+
 }

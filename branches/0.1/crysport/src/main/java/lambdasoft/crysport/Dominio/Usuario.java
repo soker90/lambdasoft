@@ -3,7 +3,7 @@ package lambdasoft.crysport.Dominio;
 public class Usuario {
 	private String clave;
 	private String nombre;
-	//private Gestor_de_credenciales gestorCredenciales ;
+	private Gestor_de_credenciales gestorCredenciales ;
 	public Usuario(String clave,String nombre){
 		this.nombre=nombre;
 		this.clave=clave;
@@ -28,9 +28,10 @@ public class Usuario {
 	/*public Gestor_de_credenciales getGestor(){
 		return this.gestorCredenciales;
 	}
+	*/
 	
-	public Usuario select(){
-		this.gestorCredenciales.select(this);
-	}*/
+	public boolean select(){
+		return Gestor_de_credenciales.ComprobarLogin(this.nombre,this.clave);
+	}
 	
 }
