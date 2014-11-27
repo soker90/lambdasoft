@@ -1,0 +1,7 @@
+= Planificacion de CRySport =
+<ul>
+<li><a href="https://code.google.com/p/lambdasoft/source/browse/wiki/Planificaci%C3%B3n_del_Proyecto_2.0.xlsx">Planificacion del proyecto 2.0</a></li>
+
+<li><a href="https://code.google.com/p/lambdasoft/source/browse/wiki/PlanificacionDelProyecto_1.5.xlsx">Planificacion del proyecto 0.2</a></li>
+
+<li><a href="https://code.google.com/p/lambdasoft/source/browse/wiki/Planificaci%C3%B3n_del_Proyecto_1.0.xlsx">Planificacion del proyecto 0.1</a></li>
