@@ -21,7 +21,7 @@ public class Competicion {
 	}
 	
 	public void insert() throws Exception{
-		this.gestorCompeticiones.InsertarCompeticion(this);
+		//this.gestorCompeticiones.InsertarCompeticion(this);
 	}
 	
 	public String getId() {
