@@ -24,4 +24,5 @@ public class Gestor_de_competiciones {
 		SQL = "INSERT INTO `competiciones`(`id`, `fecha`, `organizador`, `modalidad`) "
 				+ "VALUES ("+id.toString()+","+fecha.toString+","+organizador+","+modalidad+");";
 	}
+	
 }
