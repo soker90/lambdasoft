@@ -16,11 +16,7 @@ public class Gestor_de_credenciales {
 
 			while (rs.next())
 			{
-				System.out.println("Comparacion");
-				System.out.println(rs.getString(1) + rs.getString(2));
-				System.out.println(usuario + pass);
 				if(rs.getString(1).equals(usuario)  && rs.getString(2).equals(pass)){
-					System.out.println("Comparacion usuario pass");
 						resultado= true;
 				}
 			}

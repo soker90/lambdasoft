@@ -70,8 +70,8 @@ public class Agente {
      	conectar();
     	PreparedStatement stmt = mBD.prepareStatement(SQL);
     	int res=stmt.executeUpdate();
-    	stmt.close();
-    	desconectar();
+    	//stmt.close();
+    	//desconectar();
     	return res;
     }
     
@@ -80,8 +80,8 @@ public class Agente {
     	conectar();
     	PreparedStatement stmt = mBD.prepareStatement(SQL);
     	int res=stmt.executeUpdate();
-    	stmt.close();
-    	desconectar();
+    	//stmt.close();
+    	//desconectar();
     	return res;
     }
     
