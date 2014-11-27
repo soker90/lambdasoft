@@ -24,6 +24,13 @@ public class FormularioLogin {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+				//Agente a;
+				try {
+					// a = new Agente();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				try {
 					FormularioLogin window = new FormularioLogin();
 					window.frame.setVisible(true);

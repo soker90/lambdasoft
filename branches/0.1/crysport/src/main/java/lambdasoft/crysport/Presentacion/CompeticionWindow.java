@@ -15,8 +15,6 @@ import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import lambdasoft.crysport.Dominio.Usuario;
-
 public class CompeticionWindow {
 
 	private JFrame frame;
@@ -217,8 +215,6 @@ public class CompeticionWindow {
 	private class BtnAceptarMouseListener extends MouseAdapter {
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			Usuario u=new Usuario(txtUsuario.getText(),txtContrasenia.getText());
-			//u.select();
 		}
 	}
 }
