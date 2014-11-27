@@ -1,22 +1,12 @@
 package lambdasoft.crysport.Dominio;
 
 public class Usuario {
-	private String idUsuario;
 	private String clave;
 	private String nombre;
-	
-	public Usuario(String idUsuario,String clave,String nombre){
-		this.idUsuario=idUsuario;
-		this.clave=clave;
+	private Gestor_de_credenciales gestorCredenciales ;
+	public Usuario(String clave,String nombre){
 		this.nombre=nombre;
-	}
-	
-	public String getidUsuario(){
-		return this.idUsuario;
-	}
-	
-	public void setidUsuario(String id){
-		this.idUsuario=id;
+		this.clave=clave;
 	}
 	
 	public String getClave(){
@@ -33,6 +23,14 @@ public class Usuario {
 	
 	public void setNombre(String n){
 		this.nombre=n;
+	}
+	
+	public Gestor_de_credenciales getGestor(){
+		return this.gestorCredenciales;
+	}
+	
+	public Usuario select(){
+		this.gestorCredenciales.select(this);
 	}
 	
 }

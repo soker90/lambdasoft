@@ -4,11 +4,18 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 import java.awt.BorderLayout;
+
 import javax.swing.JTabbedPane;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import lambdasoft.crysport.Dominio.Usuario;
 
 public class CompeticionWindow {
 
@@ -118,6 +125,7 @@ public class CompeticionWindow {
 			pnlLogin.add(txtContrasenia);
 		}
 		{
+			btnAceptar.addMouseListener(new BtnAceptarMouseListener());
 			btnAceptar.setBounds(200, 178, 117, 25);
 			pnlLogin.add(btnAceptar);
 		}
@@ -204,6 +212,13 @@ public class CompeticionWindow {
 		}
 		{
 			tabbedPane.addTab("Consultar", null, panel, null);
+		}
+	}
+	private class BtnAceptarMouseListener extends MouseAdapter {
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			Usuario u=new Usuario(txtUsuario.getText(),txtContrasenia.getText());
+			u.select();
 		}
 	}
 }
