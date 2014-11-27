@@ -67,8 +67,7 @@ public class Agente {
     	conectar();
     	PreparedStatement stmt = mBD.prepareStatement(SQL);
     	ResultSet rs = stmt.executeQuery(SQL); 
-    	//rs.next();
-    	//String user = rs.getString(2);
+    	
     	stmt.close();
     	desconectar();
     	return rs;

@@ -7,6 +7,8 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 
+import lambdasoft.crysport.Dominio.Gestor_de_credenciales;
+
 public class FormularioLogin {
 
 	private JFrame frame;
@@ -32,6 +34,7 @@ public class FormularioLogin {
 		});
 	}
 
+	
 	/**
 	 * Create the application.
 	 */
@@ -66,6 +69,12 @@ public class FormularioLogin {
 		lblContrasenia.setBounds(57, 147, 100, 15);
 		
 		frame.getContentPane().add(lblContrasenia);
+		
+		btnAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Gestor_de_credenciales.ComprobarLogin(txtUsuario.getText(), txtPassword.getText());
+            }
+        });
 	}
 
 }

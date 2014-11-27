@@ -218,7 +218,7 @@ public class CompeticionWindow {
 		@Override
 		public void mouseClicked(MouseEvent e) {
 			Usuario u=new Usuario(txtUsuario.getText(),txtContrasenia.getText());
-			u.select();
+			//u.select();
 		}
 	}
 }
