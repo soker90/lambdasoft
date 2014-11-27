@@ -13,7 +13,8 @@ public class Agente {
     private static String nombre="sql459526";
     private static String userName="sql459526";
     private static String password="fF5*rU6!";
-    private static Connection conexion;
+    @SuppressWarnings("unused")
+	private static Connection conexion;
     
 
     //Constructor
@@ -33,17 +34,18 @@ public class Agente {
      }
  
     //Metodo para realizar la conexion a la base de datos 
-    public void conectar() throws Exception {
+    public void conectar(){
         // Class.forName(driver);
          //mBD=DriverManager.getConnection(url);
     	try
     	 {
     		Class.forName("com.mysql.jdbc.Driver");
+    		conexion = DriverManager.getConnection ("jdbc:mysql://"+url+"/"+nombre,userName, password);
     	 } catch (Exception e)
     	 {
     		 e.printStackTrace();
     	 }
-    	conexion = DriverManager.getConnection ("jdbc:mysql://"+url+"/"+nombre,userName, password);
+    	
          
          /*MysqlDataSource dataSource = new MysqlDataSource();
          dataSource.setUser(userName);
@@ -59,6 +61,18 @@ public class Agente {
     public void desconectar() throws Exception{
     	mBD.close();
     }
+    
+  //Metodo para realizar una consulta en la base de datos
+    public ResultSet select(String SQL) throws SQLException, Exception{ 
+    	conectar();
+    	PreparedStatement stmt = mBD.prepareStatement(SQL);
+    	ResultSet rs = stmt.executeQuery(SQL); 
+    	//rs.next();
+    	//String user = rs.getString(2);
+    	stmt.close();
+    	desconectar();
+    	return rs;
+    }
 
     //Metodo para realizar una insercion en la base de datos
     public int insert(String SQL) throws SQLException, Exception{ 
@@ -72,6 +86,7 @@ public class Agente {
     
     //Metodo para realizar una eliminacion en la base de datos
     public int delete(String SQL) throws SQLException,Exception{
+    	conectar();
     	PreparedStatement stmt = mBD.prepareStatement(SQL);
     	int res=stmt.executeUpdate();
     	stmt.close();

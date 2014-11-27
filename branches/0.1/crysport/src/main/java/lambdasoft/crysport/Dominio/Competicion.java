@@ -20,7 +20,7 @@ public class Competicion {
 		return this.gestorCompeticiones;
 	}
 	
-	public void insert(){
+	public void insert() throws Exception{
 		this.gestorCompeticiones.InsertarCompeticion(this);
 	}
 	
