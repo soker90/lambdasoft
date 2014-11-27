@@ -1,0 +1,5 @@
+= Requisitos =
+<ul>
+<li><a href="https://code.google.com/p/lambdasoft/source/browse/wiki/Requisitos_2.0.pdf">Especificacion de requisitos Versión 2.0 FINAL</a></li>
+
+<li><a href="https://code.google.com/p/lambdasoft/source/browse/wiki/Especificaci%C3%B3n_CRySport.pdf">Especificacion CRySport Versión 2.0</a></li>
