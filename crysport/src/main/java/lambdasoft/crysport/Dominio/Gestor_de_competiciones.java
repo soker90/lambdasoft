@@ -27,7 +27,6 @@ public class Gestor_de_competiciones {
 			e.printStackTrace();
 		}
 		return false;
-		
 	}
 
 	public boolean BorrarCompeticion(int id) {

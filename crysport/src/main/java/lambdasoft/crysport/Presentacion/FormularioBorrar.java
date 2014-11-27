@@ -7,6 +7,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
+import lambdasoft.crysport.Dominio.Gestor_de_credenciales;
+
 public class FormularioBorrar {
 
 	private JFrame frame;
@@ -32,6 +34,8 @@ public class FormularioBorrar {
 				}
 			}
 		});
+		
+		
 	}
 
 	/**
@@ -80,6 +84,12 @@ public class FormularioBorrar {
 			btnEliminar.setBounds(175, 218, 117, 25);
 			frame.getContentPane().add(btnEliminar);
 		}
+		
+		btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+            }
+        });
 	}
 
 }
