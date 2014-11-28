@@ -2,8 +2,6 @@ package lambdasoft.crysport.Persistencia;
 
 import java.sql.*;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
-
 public class Agente {
 	
 	//Instancia del agente
@@ -35,8 +33,6 @@ public class Agente {
  
     //Metodo para realizar la conexion a la base de datos 
     public void conectar(){
-        // Class.forName(driver);
-         //mBD=DriverManager.getConnection(url);
     	try
     	 {
     		Class.forName("com.mysql.jdbc.Driver");
@@ -44,9 +40,7 @@ public class Agente {
     	 } catch (Exception e)
     	 {
     		 e.printStackTrace();
-    	 }
-    	
-         
+    	 }  
     }
 
     
@@ -60,8 +54,6 @@ public class Agente {
     	conectar();
     	Statement stmt = mBD.createStatement();
     	ResultSet res = stmt.executeQuery(SQL); 
-    	//stmt.close();
-    	//desconectar();
     	return res;
     }
 
@@ -70,8 +62,6 @@ public class Agente {
      	conectar();
     	PreparedStatement stmt = mBD.prepareStatement(SQL);
     	int res=stmt.executeUpdate();
-    	//stmt.close();
-    	//desconectar();
     	return res;
     }
     
@@ -80,8 +70,6 @@ public class Agente {
     	conectar();
     	PreparedStatement stmt = mBD.prepareStatement(SQL);
     	int res=stmt.executeUpdate();
-    	//stmt.close();
-    	//desconectar();
     	return res;
     }
     

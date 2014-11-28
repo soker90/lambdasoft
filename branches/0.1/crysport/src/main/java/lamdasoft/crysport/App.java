@@ -1,13 +1,11 @@
 package lamdasoft.crysport;
 
-/**
- * Hello world!
- *
- */
+import lambdasoft.crysport.Presentacion.FormInicio;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        FormInicio.main(args);
     }
 }
