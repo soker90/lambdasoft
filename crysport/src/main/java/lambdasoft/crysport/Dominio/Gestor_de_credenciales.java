@@ -5,8 +5,6 @@ import java.sql.SQLException;
 
 import lambdasoft.crysport.Persistencia.Agente;
 
-
-
 public class Gestor_de_credenciales {
 
 	public static boolean ComprobarLogin(String usuario, String pass) {
@@ -17,15 +15,13 @@ public class Gestor_de_credenciales {
 			while (rs.next())
 			{
 				if(rs.getString(1).equals(usuario)  && rs.getString(2).equals(pass)){
-						resultado= true;
+                                    resultado= true;
 				}
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return resultado;
