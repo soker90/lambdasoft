@@ -8,11 +8,13 @@ public class Agente {
     protected static Agente mInstancia=null;
     //Conexion con la base de datos
     protected static Connection mBD;
-	//Identificador  de la base de datos
-    private static String url="mysql.nixiweb.com";
-    private static String nombre="u247820005_g0203";
-    private static String userName="u247820005_g0203";
-    private static String password="passwordg0203";
+	
+    //Identificador  de la base de datos
+    
+    private static String url="sql5.freemysqlhosting.net";
+    private static String nombre="sql561481";
+    private static String userName="sql561481";
+    private static String password="vI2*nB4*";
 
 
     //Constructor
