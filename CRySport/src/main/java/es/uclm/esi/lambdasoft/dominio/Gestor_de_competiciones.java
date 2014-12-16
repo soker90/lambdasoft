@@ -52,7 +52,6 @@ public class Gestor_de_competiciones {
 	public static boolean ModificarCompeticion(String id,String fecha,String organizador,String modalidad) {
             boolean resultado=false;
             try {
-                    System.out.println("UPDATE competiciones  SET  fecha='"+fecha+"', organizador='"+organizador+"', modalidad='"+modalidad+"' WHERE id="+id+"");
                     int rs = Agente.getAgente().insert("UPDATE competiciones  SET  fecha='"+fecha+"', organizador='"+organizador+"', modalidad='"+modalidad+"' WHERE id='"+id+"'");
 
                     if(rs!=0){
