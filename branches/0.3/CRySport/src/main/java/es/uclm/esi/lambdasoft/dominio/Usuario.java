@@ -1,32 +1,37 @@
 package es.uclm.esi.lambdasoft.dominio;
 
-public class Usuario {
+public class Usuario 
+{
 	private String clave;
 	private String nombre;
-	
-	public Usuario(String clave,String nombre){
-		this.nombre=nombre;
-		this.clave=clave;
+ 
+	public Usuario(String clave,String nombre)
+	{
+		this.nombre=nombre.replace("\'", "");
+		this.clave=clave.replace("\'", "");
 	}
-	
-	public String getClave(){
+ 
+	public String getClave()
+	{
 		return this.clave;
 	}
-	
-	public void setClave(String c){
+ 
+	public void setClave(String c)
+	{
 		this.clave=c;
 	}
-	
-	public String getNombre(){
+ 
+	public String getNombre()
+	{
 		return this.nombre;
 	}
-	
-	public void setNombre(String n){
+	public void setNombre(String n)
+	{
 		this.nombre=n;
 	}
-	
-	public boolean select(){
+		 
+	public boolean select()
+	{
 		return Gestor_de_credenciales.ComprobarLogin(this.nombre,this.clave);
 	}
-	
 }
