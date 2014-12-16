@@ -82,11 +82,7 @@ public class Competicion_tests extends TestCase
 				while(r.next())
 				{
 					if(c.getId().equalsIgnoreCase(r.getString(1)))
-					{
-						System.out.println("Fecha: "+r.getString(2));
-						System.out.println("Modalidad: "+r.getString(4));
-						System.out.println("Organizador: "+r.getString(3));
-						
+					{						
 						if(c.getFecha().equalsIgnoreCase(r.getString(2)) &&
 								c.getModalidad().equalsIgnoreCase(r.getString(4)) && 
 								c.getOrganizador().equalsIgnoreCase(r.getString(3)))
