@@ -98,8 +98,10 @@ public class Competicion_tests extends TestCase
 			{
                 e1.printStackTrace();
         }
-		/*Oraculo*/
+		
 		c.delete();
+		
+		/*Oraculo*/
 		
 		assertTrue(resultado);
 		

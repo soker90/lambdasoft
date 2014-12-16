@@ -8,10 +8,9 @@ import java.util.LinkedList;
 import es.uclm.esi.lambdasoft.persistencia.Agente;
 
 
-public class Gestor_de_competiciones {
+public class Gestor_de_competiciones 
+{
 	public Competicion competicion;
-	@SuppressWarnings("unused")
-	private LinkedList<Competicion> lista=new LinkedList<Competicion>();
 
 	public static boolean BorrarCompeticion(int id) {
             boolean resultado=false;
