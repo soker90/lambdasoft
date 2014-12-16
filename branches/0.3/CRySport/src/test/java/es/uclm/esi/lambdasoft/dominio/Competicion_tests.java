@@ -1,5 +1,8 @@
 package es.uclm.esi.lambdasoft.dominio;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import junit.framework.TestCase;
 
 public class Competicion_tests extends TestCase 
@@ -22,6 +25,25 @@ public class Competicion_tests extends TestCase
 		
 	}
 	
+	public void test_update()
+	{
+		/* setup */
+		Competicion c=new Competicion("5","456456","46546465","654654646546");
+		
+		/* ejecucion del escenario */
+		
+		c.insert();
+		c.setFecha("456");
+		c.setModalidad("bicis");
+		c.setOrganizador("asdaf");
+		
+		boolean resultado =c.update();
+
+		/*Oraculo*/
+		
+			assertTrue(resultado);
+	}
+	
 	public void test_delete()
 	{
 		/* setup */
@@ -39,34 +61,47 @@ public class Competicion_tests extends TestCase
 		
 	}
 	
+	
+	public void test_select()
+	{
+		/* setup */
+		/*(String id, String fecha, String organizador, String modalidad)*/
+		Competicion c=new Competicion("5","fecha","organizador","modalidad");
+		boolean resultado=false;
+		
+		/* ejecucion del escenario */
+		
+		c.insert();
+		ResultSet r= c.selectAll();
+		
+		boolean fin = false;
+		
+			
+			try 
+			{
+				while(r.next())
+				{
+					if(c.getId().equalsIgnoreCase(r.getString(1)))
+					{
+						System.out.println("Fecha: "+r.getString(2));
+						System.out.println("Modalidad: "+r.getString(4));
+						System.out.println("Organizador: "+r.getString(3));
+						
+						if(c.getFecha().equalsIgnoreCase(r.getString(2)) &&
+								c.getModalidad().equalsIgnoreCase(r.getString(4)) && 
+								c.getOrganizador().equalsIgnoreCase(r.getString(3)))
+									resultado=true;
+					}
+				}
+			} 
+			catch (SQLException e1) 
+			{
+                e1.printStackTrace();
+        }
+		/*Oraculo*/
+		c.delete();
+		
+		assertTrue(resultado);
+		
+	}	
 }
-
-/*
-public class ConverterTest extends TestCase {
-	
-	public void test100CaK(){
-	
-		Converter c = new Converter();
-			
-		try{
-			double result = c.convert("C", "K", 100);
-			assertTrue(result==373);
-		}catch (Exception e){
-			fail("Excepción no esperada");
-		}
-		
-	}
-	
-	public void test100CaKM(){
-		
-		Converter c = new Converter();
-			
-		try{
-			double result = c.convert("C", "KM", 100);
-			fail("Espaba excepción");
-		}catch (Exception e){
-
-		}
-		
-	}
-*/
