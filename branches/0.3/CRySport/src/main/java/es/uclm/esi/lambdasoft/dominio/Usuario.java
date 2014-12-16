@@ -3,6 +3,7 @@ package es.uclm.esi.lambdasoft.dominio;
 public class Usuario {
 	private String clave;
 	private String nombre;
+	
 	public Usuario(String clave,String nombre){
 		this.nombre=nombre;
 		this.clave=clave;
