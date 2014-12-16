@@ -10,10 +10,10 @@ public class Competicion {
 	private Gestor_de_competiciones gestorCompeticiones;
 
 	public Competicion(String id, String fecha, String organizador, String modalidad) {
-		this.id=id;
-		this.fecha=fecha;
-		this.organizador=organizador;
-		this.modalidad=modalidad;
+		this.id=id.replace("\'", "");
+		this.fecha=fecha.replace("\'", "");
+		this.organizador=organizador.replace("\'", "");
+		this.modalidad=modalidad.replace("\'", "");
 	}
 	
 	public Competicion(String id){
