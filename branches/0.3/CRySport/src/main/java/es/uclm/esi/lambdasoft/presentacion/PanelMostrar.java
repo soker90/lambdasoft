@@ -3,9 +3,6 @@ package es.uclm.esi.lambdasoft.presentacion;
 import java.awt.CardLayout;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javax.swing.DefaultListModel;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
