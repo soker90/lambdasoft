@@ -13,7 +13,7 @@ public class CompeticionTest extends TestCase
 
 		try{
 			/* Setup */
-			Competicion c=new Competicion("5","456456","46546465","654654646546");
+			Competicion c=new Competicion("5","foo","foo","foo");
 			
 			/* Ejecución del esceneario */
 			boolean resultado = c.insert();
@@ -32,7 +32,7 @@ public class CompeticionTest extends TestCase
 	public void testInsertDuplicate()
 	{
 		/* Setup */
-		Competicion c=new Competicion("5","456456","46546465","654654646546");
+		Competicion c=new Competicion("5","foo","foo","foo");
 		
 		try{
 			
@@ -58,7 +58,7 @@ public class CompeticionTest extends TestCase
 	{
 			try{
 				/* Setup */
-				Competicion c=new Competicion("5","456456","46546465","654654646546");
+				Competicion c=new Competicion("5","foo","foo","foo");
 				
 				/* Ejecución del esceneario */
 				c.insert();
@@ -80,7 +80,7 @@ public class CompeticionTest extends TestCase
 	{
 		try{
 			/* Setup */
-			Competicion c=new Competicion("5","456456","46546465","654654646546");
+			Competicion c=new Competicion("5","foo","foo","foo");
 			
 			/* Ejecución del esceneario */
 			c.insert();
@@ -95,28 +95,7 @@ public class CompeticionTest extends TestCase
 		}
 		
 	}
-	
-	public void testDeleteCompeticionNoExistente()
-	{
-		try{
-			/* Setup */
-			Competicion c=new Competicion("5","456456","46546465","654654646546");
-			
-			/* Ejecución del esceneario */
-			c.insert();
-			c.delete();
-			c.delete();
-			
-			fail("Espaba excepción");
-			
-		}catch (Exception e){
-			/* Llegar al catch es lo correcto */
-			assertTrue(e instanceof Exception);
-		}
-		
-	}
 
-	
 	public void testSelect()
 	{
 		try{
