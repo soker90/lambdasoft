@@ -34,4 +34,5 @@ public class Usuario
 	{
 		return GestorDeCredenciales.ComprobarLogin(this.nombre,this.clave);
 	}
+	
 }
