@@ -3,6 +3,7 @@ package es.uclm.esi.lambdasoft.presentacion;
 import java.awt.CardLayout;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import javax.swing.DefaultListModel;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -10,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.ListSelectionModel;
 
 import es.uclm.esi.lambdasoft.dominio.Competicion;
+import es.uclm.esi.lambdasoft.dominio.GestorDeCredenciales;
 
 @SuppressWarnings("serial")
 public class PanelMostrar extends javax.swing.JPanel {
@@ -19,7 +21,7 @@ public class PanelMostrar extends javax.swing.JPanel {
         pnlPadre = pnlInicio;
         updateModel();
         lista.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        String fecha ="01/01/2010 10:10"; //=consulta
+        String fecha = GestorDeCredenciales.ultimaConexion();
         lblConexion.setText("Ultima Conexion: " + fecha);
     }
 
