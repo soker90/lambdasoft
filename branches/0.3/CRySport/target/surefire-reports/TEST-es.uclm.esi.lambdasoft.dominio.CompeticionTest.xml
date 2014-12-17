@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="16.505" errors="0" skipped="0" tests="4" name="es.uclm.esi.lambdasoft.dominio.CompeticionTest">
+<testsuite failures="0" time="17.908" errors="0" skipped="0" tests="4" name="es.uclm.esi.lambdasoft.dominio.CompeticionTest">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/amd64"/>
@@ -24,7 +24,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/eduardo/Workspaces/ecworkspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf8199987407005389842.tmp"/>
+    <property name="classworlds.conf" value="/home/eduardo/Workspaces/ecworkspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf851493412976909670.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/opt/rh/eclipse-luna/root/usr/lib:/opt/rh/eclipse-luna/root/usr/lib64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -59,8 +59,8 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="4.064" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testInsert"/>
-  <testcase time="3.383" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testUpdate"/>
-  <testcase time="4.112" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testDelete"/>
-  <testcase time="4.946" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testSelect"/>
+  <testcase time="4.322" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testInsert"/>
+  <testcase time="3.389" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testUpdate"/>
+  <testcase time="4.642" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testDelete"/>
+  <testcase time="5.555" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testSelect"/>
 </testsuite>

@@ -3,7 +3,6 @@ package es.uclm.esi.lambdasoft.dominio;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.LinkedList;
 
 import es.uclm.esi.lambdasoft.persistencia.Agente;
 
