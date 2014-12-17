@@ -29,6 +29,31 @@ public class CompeticionTest extends TestCase
 			
 	}
 	
+	public void testInsertDuplicate()
+	{
+		/* Setup */
+		Competicion c=new Competicion("5","456456","46546465","654654646546");
+		
+		try{
+			
+			/* Ejecución del esceneario */
+			c.insert();
+			c.insert();
+			
+			fail("Espaba excepción");
+			
+		}catch (Exception e){
+			/* Llegar al catch es lo correcto */
+			try{
+				c.delete();					
+			}catch(Exception ex){
+
+			}
+			assertTrue(e instanceof Exception);
+		}
+			
+	}
+	
 	public void testUpdate()
 	{
 			try{
@@ -71,6 +96,26 @@ public class CompeticionTest extends TestCase
 		
 	}
 	
+	public void testDeleteCompeticionNoExistente()
+	{
+		try{
+			/* Setup */
+			Competicion c=new Competicion("5","456456","46546465","654654646546");
+			
+			/* Ejecución del esceneario */
+			c.insert();
+			c.delete();
+			c.delete();
+			
+			fail("Espaba excepción");
+			
+		}catch (Exception e){
+			/* Llegar al catch es lo correcto */
+			assertTrue(e instanceof Exception);
+		}
+		
+	}
+
 	
 	public void testSelect()
 	{

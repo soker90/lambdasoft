@@ -162,17 +162,17 @@ public class PanelMostrar extends javax.swing.JPanel {
     @SuppressWarnings({ "rawtypes", "unchecked" })
 	private void updateModel(){
         Competicion c=new Competicion("0");	
-        ResultSet r=c.selectAll();
         DefaultListModel listModel = new DefaultListModel(); 
         listModel.clear();
         try {
+            ResultSet r=c.selectAll();
             while(r.next()){
                     listModel.addElement(r.getString(1)+" "+r.getString(2)+" "+r.getString(3)+" "+r.getString(4)); 
             }
             lista.setModel(listModel);
                 
-        } catch (SQLException e1) {
-                e1.printStackTrace();
+        } catch (Exception e) {
+
         }
     }
 
