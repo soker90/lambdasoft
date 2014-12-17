@@ -82,9 +82,6 @@ public class CompeticionTest extends TestCase
 			/* Ejecución del esceneario */
 			c.insert();
 			ResultSet r= c.selectAll();
-			
-			boolean fin = false;
-			
 				
 				try 
 				{
