@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import es.uclm.esi.lambdasoft.persistencia.Agente;
 
 
-public class Gestor_de_competiciones 
+public class GestorDeCompeticiones 
 {
 	public Competicion competicion;
 
