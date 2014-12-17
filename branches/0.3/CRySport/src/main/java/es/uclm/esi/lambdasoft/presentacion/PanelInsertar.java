@@ -136,20 +136,26 @@ public class PanelInsertar extends javax.swing.JPanel {
 
     private boolean setRow() {
         Competicion c=new Competicion(Integer.toString(getMayorId()+1),txtFecha.getText(),txtOrganizador.getText(),txtModalidad.getText());	
-        if(c.insert()){
-                JOptionPane.showMessageDialog(null, "Competición añadida correctamente", "CRySPORT " , JOptionPane.INFORMATION_MESSAGE);
-                return true;
-        }else{
-                JOptionPane.showMessageDialog(null, "No se puede añadir la competción indicada", "CRySPORT " , JOptionPane.INFORMATION_MESSAGE);
-                return false;
+        boolean retorno = true;
+        try{
+	        if(c.insert()){
+	                JOptionPane.showMessageDialog(null, "Competición añadida correctamente", "CRySPORT " , JOptionPane.INFORMATION_MESSAGE);
+	                retorno = true;
+	        }else{
+	                JOptionPane.showMessageDialog(null, "No se puede añadir la competción indicada", "CRySPORT " , JOptionPane.INFORMATION_MESSAGE);
+	                retorno = false;
+	        }	
+        }catch(Exception e){
+        	
         }
+        return retorno;
     }
     
     private int getMayorId(){
-        Competicion c=new Competicion("0");
-        ResultSet r=c.selectAll();
         int max = -1;
-        try {
+    	try {
+        	Competicion c=new Competicion("0");
+            ResultSet r=c.selectAll();
             while(r.next()){
                 if(Integer.parseInt(r.getString(1)) > max)
                 {
@@ -157,8 +163,8 @@ public class PanelInsertar extends javax.swing.JPanel {
                 }
                         
                 }
-        } catch (SQLException e1) {
-                e1.printStackTrace();
+        } catch (Exception e) {
+        	
         }
 
         return max;

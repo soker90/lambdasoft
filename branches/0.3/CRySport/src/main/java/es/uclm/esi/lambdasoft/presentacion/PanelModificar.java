@@ -25,21 +25,27 @@ public class PanelModificar extends javax.swing.JPanel {
     }
     
     private boolean setModificar(){
-        Competicion c=new Competicion(Integer.toString(id),txtFecha.getText(),txtOrganizador.getText(),txtModalidad.getText());	
-        if(c.update()){
-                JOptionPane.showMessageDialog(null, "Competición modificada correctamente", "CRySPORT " , JOptionPane.INFORMATION_MESSAGE);
-                return true;
-        }else{
-                JOptionPane.showMessageDialog(null, "No se puede modificar la competción indicada", "CRySPORT " , JOptionPane.INFORMATION_MESSAGE);
-                return false;
+    	boolean retorno = false;
+        try{
+        	Competicion c=new Competicion(Integer.toString(id),txtFecha.getText(),txtOrganizador.getText(),txtModalidad.getText());	
+            if(c.update()){
+                    JOptionPane.showMessageDialog(null, "Competición modificada correctamente", "CRySPORT " , JOptionPane.INFORMATION_MESSAGE);
+                    retorno = true;
+            }else{
+                    JOptionPane.showMessageDialog(null, "No se puede modificar la competción indicada", "CRySPORT " , JOptionPane.INFORMATION_MESSAGE);
+                    retorno = false;
 
-        }
+            }	
+	    } catch (Exception e) {
+	    	
+	    }
+        return retorno;
     }
     
     private void getDatos(){
-        Competicion c=new Competicion(Integer.toString(id));
-        ResultSet r=c.selectAll();
         try {
+	            Competicion c=new Competicion(Integer.toString(id));
+	            ResultSet r=c.selectAll();
                 while(r.next()){
                     if(Integer.parseInt(r.getString(1)) == id)
                     {
@@ -49,9 +55,9 @@ public class PanelModificar extends javax.swing.JPanel {
                     }
                         
                 }
-        } catch (SQLException e1) {
-                e1.printStackTrace();
-        }
+	    } catch (Exception e) {
+	    	
+	    }
     }
 
     private void initComponents() {

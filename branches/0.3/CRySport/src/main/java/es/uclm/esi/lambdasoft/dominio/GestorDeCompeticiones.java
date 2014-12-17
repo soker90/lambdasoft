@@ -2,7 +2,6 @@ package es.uclm.esi.lambdasoft.dominio;
 
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import es.uclm.esi.lambdasoft.persistencia.Agente;
 
@@ -11,7 +10,7 @@ public class GestorDeCompeticiones
 {
 	public Competicion competicion;
 
-	public static boolean BorrarCompeticion(int id) {
+	public static boolean BorrarCompeticion(int id) throws Exception {
             boolean resultado=false;
             try {
                     int rs = Agente.getAgente().delete("DELETE FROM competiciones WHERE id="+id);
@@ -20,16 +19,14 @@ public class GestorDeCompeticiones
                             resultado=true;
                     }
 
-            } catch (SQLException e) {
-                    e.printStackTrace();
             } catch (Exception e) {
-                    e.printStackTrace();
-            }
+                throw(e);
+         }
 
             return resultado;
 	}
 	
-	public static boolean InsertarCompeticion(String id,String fecha,String organizador,String modalidad) {
+	public static boolean InsertarCompeticion(String id,String fecha,String organizador,String modalidad) throws Exception {
             boolean resultado=false;
             try {
                     int rs = Agente.getAgente().insert("INSERT INTO competiciones  VALUES ('"+id+"', '"+fecha+"', '"+organizador+"', '"+modalidad+"')");
@@ -37,17 +34,14 @@ public class GestorDeCompeticiones
                     if(rs!=0){
                             resultado=true;
                     }
-
-            } catch (SQLException e) {
-                    e.printStackTrace();
             } catch (Exception e) {
-                    e.printStackTrace();
+                   throw(e);
             }
 
             return resultado;
 }
 	
-	public static boolean ModificarCompeticion(String id,String fecha,String organizador,String modalidad) {
+	public static boolean ModificarCompeticion(String id,String fecha,String organizador,String modalidad) throws Exception {
             boolean resultado=false;
             try {
                     int rs = Agente.getAgente().insert("UPDATE competiciones  SET  fecha='"+fecha+"', organizador='"+organizador+"', modalidad='"+modalidad+"' WHERE id='"+id+"'");
@@ -56,26 +50,22 @@ public class GestorDeCompeticiones
                             resultado=true;
                     }
 
-            } catch (SQLException e) {
-                    e.printStackTrace();
             } catch (Exception e) {
-                    e.printStackTrace();
-            }
+                throw(e);
+         }
 
             return resultado;
     }
 	
-	public static ResultSet SeleccionarTodo() {
+	public static ResultSet SeleccionarTodo() throws Exception {
             ResultSet res=null;
             try {
                     res = Agente.getAgente().select("SELECT * FROM competiciones");
 
 
-            } catch (SQLException e) {
-                    e.printStackTrace();
             } catch (Exception e) {
-                    e.printStackTrace();
-            }
+                throw(e);
+         }
 
             return res;
     }
