@@ -7,7 +7,7 @@ public class Competicion {
 	private String fecha;
 	private String organizador;
 	private String modalidad;
-	private Gestor_de_competiciones gestorCompeticiones;
+	private GestorDeCompeticiones gestorCompeticiones;
 
 	public Competicion(String id, String fecha, String organizador, String modalidad) {
 		this.id=id.replace("\'", "");
@@ -20,24 +20,24 @@ public class Competicion {
 		this.id=id;
 	}
 	
-	public Gestor_de_competiciones getCompeticiones(){
+	public GestorDeCompeticiones getCompeticiones(){
 		return this.gestorCompeticiones;
 	}
 	
 	public boolean delete(){
-		return Gestor_de_competiciones.BorrarCompeticion(Integer.parseInt(this.id));
+		return GestorDeCompeticiones.BorrarCompeticion(Integer.parseInt(this.id));
 	}
 	
 	public boolean insert(){
-		return Gestor_de_competiciones.InsertarCompeticion(this.id,this.fecha,this.organizador,this.modalidad);
+		return GestorDeCompeticiones.InsertarCompeticion(this.id,this.fecha,this.organizador,this.modalidad);
 	}
 	
 	public boolean update(){
-		return Gestor_de_competiciones.ModificarCompeticion(this.id,this.fecha,this.organizador,this.modalidad);
+		return GestorDeCompeticiones.ModificarCompeticion(this.id,this.fecha,this.organizador,this.modalidad);
 	}
 	
 	public ResultSet selectAll(){
-		return Gestor_de_competiciones.SeleccionarTodo();
+		return GestorDeCompeticiones.SeleccionarTodo();
 	}
 	
 	public String getId() {

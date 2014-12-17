@@ -32,6 +32,6 @@ public class Usuario
 		 
 	public boolean select()
 	{
-		return Gestor_de_credenciales.ComprobarLogin(this.nombre,this.clave);
+		return GestorDeCredenciales.ComprobarLogin(this.nombre,this.clave);
 	}
 }
