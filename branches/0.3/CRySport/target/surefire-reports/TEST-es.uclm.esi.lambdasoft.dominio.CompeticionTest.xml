@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="17.908" errors="0" skipped="0" tests="4" name="es.uclm.esi.lambdasoft.dominio.CompeticionTest">
+<testsuite tests="4" failures="0" name="es.uclm.esi.lambdasoft.dominio.CompeticionTest" time="13.487" errors="0" skipped="0">
   <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/amd64"/>
-    <property name="java.vm.version" value="24.65-b04"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-jdk/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.25-b02"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
     <property name="user.country" value="ES"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/eduardo/Workspaces/ecworkspace/CRySport"/>
-    <property name="java.runtime.version" value="1.7.0_71-mockbuild_2014_12_09_14_04-b00"/>
+    <property name="user.dir" value="/home/edu/workspace/CRySport"/>
+    <property name="java.runtime.version" value="1.8.0_25-b17"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/endorsed"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-jdk/jre/lib/endorsed"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/eduardo/Workspaces/ecworkspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf851493412976909670.tmp"/>
+    <property name="classworlds.conf" value="/home/edu/workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf1536734467553306398.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/opt/rh/eclipse-luna/root/usr/lib:/opt/rh/eclipse-luna/root/usr/lib64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="51.0"/>
+    <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="3.17.6-200.fc20.x86_64"/>
-    <property name="user.home" value="/home/eduardo"/>
+    <property name="os.version" value="3.17.6-1-ARCH"/>
+    <property name="user.home" value="/home/edu"/>
     <property name="user.timezone" value="Europe/Madrid"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="java.specification.version" value="1.7"/>
-    <property name="user.name" value="eduardo"/>
-    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds.jar"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="edu"/>
+    <property name="java.class.path" value="/usr/share/eclipse/../../../home/edu/.eclipse/org.eclipse.platform_4.4.1_1543616141_linux_gtk_x86_64/plugins/org.eclipse.m2e.maven.runtime_1.5.0.20140605-2032/jars/plexus-classworlds-2.5.1.jar"/>
     <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
-    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-jdk/jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.7.0_71"/>
-    <property name="java.ext.dirs" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/ext:/usr/java/packages/lib/ext"/>
-    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/rhino.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.2.fc20.x86_64/jre/classes"/>
+    <property name="java.version" value="1.8.0_25"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-jdk/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-jdk/jre/lib/resources.jar:/usr/lib/jvm/java-8-jdk/jre/lib/rt.jar:/usr/lib/jvm/java-8-jdk/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-jdk/jre/lib/jsse.jar:/usr/lib/jvm/java-8-jdk/jre/lib/jce.jar:/usr/lib/jvm/java-8-jdk/jre/lib/charsets.jar:/usr/lib/jvm/java-8-jdk/jre/lib/jfr.jar:/usr/lib/jvm/java-8-jdk/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="maven.home" value="/home/edu/workspace/CRySport/EMBEDDED"/>
     <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -59,8 +60,8 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="4.322" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testInsert"/>
-  <testcase time="3.389" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testUpdate"/>
-  <testcase time="4.642" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testDelete"/>
-  <testcase time="5.555" classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testSelect"/>
+  <testcase classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testInsert" time="4.247"/>
+  <testcase classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testUpdate" time="2.689"/>
+  <testcase classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testDelete" time="2.859"/>
+  <testcase classname="es.uclm.esi.lambdasoft.dominio.CompeticionTest" name="testSelect" time="3.692"/>
 </testsuite>
