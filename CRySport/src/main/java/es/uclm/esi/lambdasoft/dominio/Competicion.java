@@ -24,19 +24,19 @@ public class Competicion {
 		return this.gestorCompeticiones;
 	}
 	
-	public boolean delete(){
+	public boolean delete() throws Exception{
 		return GestorDeCompeticiones.BorrarCompeticion(Integer.parseInt(this.id));
 	}
 	
-	public boolean insert(){
+	public boolean insert() throws Exception{
 		return GestorDeCompeticiones.InsertarCompeticion(this.id,this.fecha,this.organizador,this.modalidad);
 	}
 	
-	public boolean update(){
+	public boolean update() throws Exception{
 		return GestorDeCompeticiones.ModificarCompeticion(this.id,this.fecha,this.organizador,this.modalidad);
 	}
 	
-	public ResultSet selectAll(){
+	public ResultSet selectAll() throws Exception{
 		return GestorDeCompeticiones.SeleccionarTodo();
 	}
 	
