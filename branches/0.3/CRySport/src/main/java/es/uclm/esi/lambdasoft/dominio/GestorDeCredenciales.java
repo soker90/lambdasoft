@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import es.uclm.esi.lambdasoft.persistencia.Agente;
 
-public class Gestor_de_credenciales {
+public class GestorDeCredenciales {
 
 	public static boolean ComprobarLogin(String usuario, String pass) {
 		boolean resultado=false;
