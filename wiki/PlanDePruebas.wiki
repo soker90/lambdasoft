@@ -1,0 +1,3 @@
+= Plan de pruebas =
+
+Descargue el plan de pruebas para CRySport <a href="https://code.google.com/p/lambdasoft/source/browse/wiki/EjercicioA-PlandePruebas.pdf">aquí</a>. 
