@@ -11,11 +11,8 @@ public class Agente {
 	
     //Identificador  de la base de datos
     
-    private static String url="sql5.freemysqlhosting.net";
-    private static String nombre="sql561481";
-    private static String userName="sql561481";
-    private static String password="vI2*nB4*";
-
+    private static String ruta_bbdd="sql561481.sqlite";
+    
 
     //Constructor
     public Agente()throws Exception {
@@ -37,8 +34,8 @@ public class Agente {
     public void conectar(){
     	try
     	 {
-    		Class.forName("com.mysql.jdbc.Driver");
-    		mBD = DriverManager.getConnection ("jdbc:mysql://"+url+"/"+nombre,userName, password);
+    		Class.forName("org.sqlite.JDBC");
+    		mBD = DriverManager.getConnection("jdbc:sqlite:"+ruta_bbdd);
     	 } catch (Exception e)
     	 {
     		 e.printStackTrace();
@@ -53,7 +50,7 @@ public class Agente {
     
   //Metodo para realizar una consulta en la base de datos
     public ResultSet select(String SQL) throws SQLException, Exception{ 
-    	conectar();
+    	//conectar();
     	Statement stmt = mBD.createStatement();
     	ResultSet res = stmt.executeQuery(SQL); 
     	return res;
@@ -61,7 +58,7 @@ public class Agente {
 
     //Metodo para realizar una insercion en la base de datos
     public int insert(String SQL) throws SQLException, Exception{ 
-     	conectar();
+     	//conectar();
     	PreparedStatement stmt = mBD.prepareStatement(SQL);
     	int res=stmt.executeUpdate();
     	return res;
@@ -69,7 +66,7 @@ public class Agente {
     
     //Metodo para realizar una eliminacion en la base de datos
     public int delete(String SQL) throws SQLException,Exception{
-    	conectar();
+    	//conectar();
     	PreparedStatement stmt = mBD.prepareStatement(SQL);
     	int res=stmt.executeUpdate();
     	return res;
@@ -77,7 +74,7 @@ public class Agente {
     
     //Metodo para realizar una eliminacion en la base de datos
     public int update(String SQL) throws SQLException,Exception{
-    	conectar();
+    	//conectar();
     	PreparedStatement stmt = mBD.prepareStatement(SQL);
     	int res=stmt.executeUpdate();
     	stmt.close();
