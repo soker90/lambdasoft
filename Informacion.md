@@ -1,0 +1,33 @@
+# Página de informacion de LambdaSoft #
+
+Puede obtener información básica de nuestra empresa, estructura, economia, equipo y sus inversores <a href='https://code.google.com/p/lambdasoft/wiki/AplicacionDelPUD'>aquí</a>.
+
+# Especificación de requisitos de Crysport #
+
+Puede ver todo lo referente a los requisitos de CRySport <a href='https://code.google.com/p/lambdasoft/wiki/EspecificacionDeRequisitos'>aquí</a>.
+
+# Planificación del proyecto #
+Puede ver todo lo referente a planificacion del proyecto <a href='https://code.google.com/p/lambdasoft/wiki/PlanificacionDelProyecto'>aquí</a>.
+
+# Calidad #
+
+Puede ver nuestra filosofía de calidad <a href='https://sites.google.com/site/lsuclm/calidad'>aquí</a>.
+
+y más informacion sobre calidad, como por ejemplo las preguntas de evaluación para la certificación de la empresa y los resultados de la Evaluación <a href='https://code.google.com/p/lambdasoft/wiki/Calidad'>aquí</a>.
+
+# Planificacion del proyecto #
+Puede ver como hemos planificado el proyecto descargando lo que hay <a href='https://code.google.com/p/lambdasoft/wiki/AplicacionDelPUD'>aquí</a>.
+
+# Gestion de configuracion #
+
+Información sobre nuestra gestión de configuración <a href='https://code.google.com/p/lambdasoft/wiki/GestionDeLaConfiguracion'>aquí</a>.
+
+# Actas de empresa #
+
+Todas nuestras actas están <a href='https://code.google.com/p/lambdasoft/wiki/ActasReunion'>aquí</a>.
+
+# Manuales #
+
+Manuales:
+Algunos manuales desarrollados por nuestro equipo pueden descargarse <a href='https://code.google.com/p/lambdasoft/wiki/ManualesDocumentados'>aquí</a>.
+

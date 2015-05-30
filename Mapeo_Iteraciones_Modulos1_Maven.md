@@ -1,0 +1,3 @@
+# Mapeo Iteraciones/Modulos #
+
+https://code.google.com/p/lambdasoft/source/browse/wiki/MapeoIteraciones-ModulosMaven.pdf

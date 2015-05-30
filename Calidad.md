@@ -1,0 +1,5 @@
+# Calidad LambdaSoft #
+<ul>
+<li><a href='https://code.google.com/p/lambdasoft/source/browse/wiki/CALIDADDEPROCESOS-LAMBDASOFT.pdf'>Calidad de procesos lambdaSoft</a></li>
+
+<li><a href='https://code.google.com/p/lambdasoft/source/browse/wiki/PreguntasDeEvaluacionProcesos_2.0.pdf'>Preguntas De Evaluacion De Procesos</a></li>
